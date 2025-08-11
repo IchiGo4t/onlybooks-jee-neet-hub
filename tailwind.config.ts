@@ -18,6 +18,13 @@ export default {
 			}
 		},
 		extend: {
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-physics': 'var(--gradient-physics)',
+				'gradient-math': 'var(--gradient-math)',
+				'gradient-chemistry': 'var(--gradient-chemistry)',
+				'gradient-biology': 'var(--gradient-biology)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +58,27 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Subject-specific colors
+				physics: {
+					DEFAULT: 'hsl(var(--physics))',
+					foreground: 'hsl(var(--physics-foreground))'
+				},
+				math: {
+					DEFAULT: 'hsl(var(--math))',
+					foreground: 'hsl(var(--math-foreground))'
+				},
+				chemistry: {
+					DEFAULT: 'hsl(var(--chemistry))',
+					foreground: 'hsl(var(--chemistry-foreground))'
+				},
+				biology: {
+					DEFAULT: 'hsl(var(--biology))',
+					foreground: 'hsl(var(--biology-foreground))'
+				},
+				ncert: {
+					DEFAULT: 'hsl(var(--ncert))',
+					foreground: 'hsl(var(--ncert-foreground))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
