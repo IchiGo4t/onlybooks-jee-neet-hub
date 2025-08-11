@@ -89,7 +89,13 @@ const Subject = () => {
 
   // Mock data for files - in a real app, this would come from an API
   const mockFiles = [
-    { name: "Coming Soon!", type: "Notice", size: "0 MB", description: "Files will be added every week" },
+    { 
+      name: "HC Verma", 
+      type: "PDF", 
+      size: "45 MB", 
+      description: "Complete HC Verma Physics textbook with solutions",
+      downloadUrl: "https://drive.google.com/file/d/1T7lMIQdh4rsdlBdoxwc0KCMxjrTX0ySc/view?usp=drive_link"
+    },
     { name: "Stay Tuned!", type: "Update", size: "0 MB", description: "More content is on the way" }
   ];
 
@@ -145,7 +151,7 @@ const Subject = () => {
               </Card>
             ) : (
               <div className="space-y-4">
-                {mockFiles.map((file, index) => (
+                {mockFiles.map((file: any, index) => (
                   <Card key={index} className="hover:shadow-md transition-shadow">
                     <CardHeader className="pb-3">
                       <div className="flex items-center justify-between">
@@ -161,11 +167,16 @@ const Subject = () => {
                     </CardHeader>
                     <CardContent className="pt-0">
                       <div className="flex gap-2">
-                        <Button variant="outline" size="sm" disabled>
+                        <Button variant="outline" size="sm" disabled={!file.downloadUrl}>
                           <Eye className="mr-2 h-4 w-4" />
                           Preview
                         </Button>
-                        <Button variant="outline" size="sm" disabled>
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          disabled={!file.downloadUrl}
+                          onClick={() => file.downloadUrl && window.open(file.downloadUrl, '_blank')}
+                        >
                           <Download className="mr-2 h-4 w-4" />
                           Download
                         </Button>
