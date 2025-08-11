@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, FileText, Target } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface SubjectCardProps {
   title: string;
@@ -9,9 +10,16 @@ interface SubjectCardProps {
   fileCount: number;
   variant: "physics" | "math" | "chemistry" | "biology" | "ncert" | "default";
   icon?: React.ReactNode;
+  slug?: string;
 }
 
-const SubjectCard = ({ title, description, fileCount, variant, icon }: SubjectCardProps) => {
+const SubjectCard = ({ title, description, fileCount, variant, icon, slug }: SubjectCardProps) => {
+  const navigate = useNavigate();
+  
+  const handleExplore = () => {
+    const subjectSlug = slug || title.toLowerCase().replace(/\s+/g, '-');
+    navigate(`/subject/${subjectSlug}`);
+  };
   const getGradientClass = () => {
     switch (variant) {
       case "physics":
@@ -52,6 +60,7 @@ const SubjectCard = ({ title, description, fileCount, variant, icon }: SubjectCa
         <Button 
           variant={variant === "default" ? "default" : variant as any}
           className="w-full group-hover:scale-105 transition-transform duration-200"
+          onClick={handleExplore}
         >
           <Target className="mr-2 h-4 w-4" />
           Explore
