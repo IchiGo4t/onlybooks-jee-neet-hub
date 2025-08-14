@@ -8,37 +8,42 @@ const Index = () => {
     {
       title: "Physics",
       description: "Complete physics study materials with HC Verma, Resnick Halliday",
-      fileCount: 0,
+      fileCount: 1,
       variant: "physics" as const,
-      icon: <FlaskConical className="h-5 w-5 text-white" />
+      icon: <FlaskConical className="h-5 w-5 text-white" />,
+      slug: "physics"
     },
     {
       title: "Mathematics", 
       description: "Advanced mathematics resources and problem sets",
       fileCount: 0,
       variant: "math" as const,
-      icon: <Calculator className="h-5 w-5 text-white" />
+      icon: <Calculator className="h-5 w-5 text-white" />,
+      slug: "mathematics"
     },
     {
       title: "Chemistry",
       description: "Organic, Inorganic & Physical Chemistry guides", 
       fileCount: 0,
       variant: "chemistry" as const,
-      icon: <FlaskConical className="h-5 w-5 text-white" />
+      icon: <FlaskConical className="h-5 w-5 text-white" />,
+      slug: "chemistry"
     },
     {
       title: "Biology",
       description: "NEET Biology preparation materials",
       fileCount: 0,
       variant: "biology" as const,
-      icon: <Microscope className="h-5 w-5 text-white" />
+      icon: <Microscope className="h-5 w-5 text-white" />,
+      slug: "biology"
     },
     {
       title: "NCERT Solutions", 
       description: "Complete NCERT textbooks and detailed solutions",
       fileCount: 0,
       variant: "ncert" as const,
-      icon: <BookOpen className="h-5 w-5 text-white" />
+      icon: <BookOpen className="h-5 w-5 text-white" />,
+      slug: "ncert-solutions"
     }
   ];
 
@@ -48,21 +53,24 @@ const Index = () => {
       description: "Premium coaching institute study materials",
       fileCount: 0,
       variant: "default" as const,
-      icon: <GraduationCap className="h-5 w-5 text-white" />
+      icon: <GraduationCap className="h-5 w-5 text-white" />,
+      slug: "coaching-modules"
     },
     {
       title: "Previous Year Papers",
       description: "JEE & NEET question papers collection", 
       fileCount: 0,
       variant: "default" as const,
-      icon: <FileText className="h-5 w-5 text-white" />
+      icon: <FileText className="h-5 w-5 text-white" />,
+      slug: "previous-year-papers"
     },
     {
       title: "Test Series",
       description: "Mock tests and practice series",
       fileCount: 0,
       variant: "default" as const,
-      icon: <Target className="h-5 w-5 text-white" />
+      icon: <Target className="h-5 w-5 text-white" />,
+      slug: "test-series"
     }
   ];
 
