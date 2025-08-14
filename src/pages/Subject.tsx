@@ -123,7 +123,13 @@ const Subject = () => {
         ];
       case 'coaching-modules':
         return [
-          { name: "Allen Modules", type: "PDF", size: "Coming Soon", description: "Complete Allen coaching materials" },
+          { 
+            name: "Allen Modules", 
+            type: "PDF", 
+            size: "Multiple Files", 
+            description: "Complete Allen coaching materials",
+            downloadUrl: "https://drive.google.com/drive/folders/1k7fR6OWJ-LFOzBY795xzwhfNfMvqmeZ8?usp=drive_link"
+          },
           { name: "Resonance DLP", type: "PDF", size: "Coming Soon", description: "Distance learning program modules" }
         ];
       case 'previous-year-papers':
