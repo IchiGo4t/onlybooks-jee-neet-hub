@@ -2,13 +2,14 @@ import SubjectCard from "@/components/SubjectCard";
 import ContactSection from "@/components/ContactSection";
 import { BookOpen, Calculator, FlaskConical, Microscope, GraduationCap, FileText, Target, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getSubjectFileCount } from "@/utils/subjectFiles";
 
 const Index = () => {
   const coreSubjects = [
     {
       title: "Physics",
       description: "Complete physics study materials with HC Verma, Resnick Halliday",
-      fileCount: 1,
+      fileCount: getSubjectFileCount("physics"),
       variant: "physics" as const,
       icon: <FlaskConical className="h-5 w-5 text-white" />,
       slug: "physics"
@@ -16,7 +17,7 @@ const Index = () => {
     {
       title: "Mathematics", 
       description: "Advanced mathematics resources and problem sets",
-      fileCount: 0,
+      fileCount: getSubjectFileCount("mathematics"),
       variant: "math" as const,
       icon: <Calculator className="h-5 w-5 text-white" />,
       slug: "mathematics"
@@ -24,7 +25,7 @@ const Index = () => {
     {
       title: "Chemistry",
       description: "Organic, Inorganic & Physical Chemistry guides", 
-      fileCount: 0,
+      fileCount: getSubjectFileCount("chemistry"),
       variant: "chemistry" as const,
       icon: <FlaskConical className="h-5 w-5 text-white" />,
       slug: "chemistry"
@@ -32,7 +33,7 @@ const Index = () => {
     {
       title: "Biology",
       description: "NEET Biology preparation materials",
-      fileCount: 0,
+      fileCount: getSubjectFileCount("biology"),
       variant: "biology" as const,
       icon: <Microscope className="h-5 w-5 text-white" />,
       slug: "biology"
@@ -40,7 +41,7 @@ const Index = () => {
     {
       title: "NCERT Solutions", 
       description: "Complete NCERT textbooks and detailed solutions",
-      fileCount: 0,
+      fileCount: getSubjectFileCount("ncert-solutions"),
       variant: "ncert" as const,
       icon: <BookOpen className="h-5 w-5 text-white" />,
       slug: "ncert-solutions"
@@ -51,7 +52,7 @@ const Index = () => {
     {
       title: "Coaching Modules",
       description: "Premium coaching institute study materials",
-      fileCount: 0,
+      fileCount: getSubjectFileCount("coaching-modules"),
       variant: "default" as const,
       icon: <GraduationCap className="h-5 w-5 text-white" />,
       slug: "coaching-modules"
@@ -59,7 +60,7 @@ const Index = () => {
     {
       title: "Previous Year Papers",
       description: "JEE & NEET question papers collection", 
-      fileCount: 0,
+      fileCount: getSubjectFileCount("previous-year-papers"),
       variant: "default" as const,
       icon: <FileText className="h-5 w-5 text-white" />,
       slug: "previous-year-papers"
@@ -67,7 +68,7 @@ const Index = () => {
     {
       title: "Test Series",
       description: "Mock tests and practice series",
-      fileCount: 0,
+      fileCount: getSubjectFileCount("test-series"),
       variant: "default" as const,
       icon: <Target className="h-5 w-5 text-white" />,
       slug: "test-series"
