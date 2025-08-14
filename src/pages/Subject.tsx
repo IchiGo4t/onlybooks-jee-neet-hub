@@ -109,7 +109,14 @@ const Subject = () => {
       case 'chemistry':
         return [
           { name: "OP Tandon", type: "PDF", size: "Coming Soon", description: "Organic Chemistry for competitions" },
-          { name: "JD Lee", type: "PDF", size: "Coming Soon", description: "Concise inorganic chemistry" }
+          { name: "JD Lee", type: "PDF", size: "Coming Soon", description: "Concise inorganic chemistry" },
+          { 
+            name: "VJ Sir Inorganic Chemistry", 
+            type: "PDF", 
+            size: "25 MB", 
+            description: "Complete inorganic chemistry notes and solutions",
+            downloadUrl: "https://drive.google.com/file/d/1wOAchPw0N32CVPOHqfyWcBHUHywoPK4E/view?usp=drive_link"
+          }
         ];
       case 'biology':
         return [
@@ -130,7 +137,13 @@ const Subject = () => {
             description: "Complete Allen coaching materials",
             downloadUrl: "https://drive.google.com/drive/folders/1k7fR6OWJ-LFOzBY795xzwhfNfMvqmeZ8?usp=drive_link"
           },
-          { name: "Resonance DLP", type: "PDF", size: "Coming Soon", description: "Distance learning program modules" }
+          { 
+            name: "Resonance DLP", 
+            type: "PDF", 
+            size: "Multiple Files", 
+            description: "Distance learning program modules",
+            downloadUrl: "https://drive.google.com/drive/folders/1f_lKyRaWYt-pz9Dyr-X6Q9qJ18UBekeM?usp=drive_link"
+          }
         ];
       case 'previous-year-papers':
         return [
